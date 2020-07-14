@@ -15,7 +15,11 @@
       <div class="col-lg-7 col-md-8">
             <h2 class="section-heading title">{{project.title}}</h2>   
         <p>{{project.description}}</p>
-        <!--<p><a href="http://google.com">Más información</a></p>-->
+
+        {%if project.enlace is not None %}
+            <p><a href="{{project.enlace}}">Mas informacion</a></p>
+        {% endif %}
+        
         </div>
     </div>
     {% endfor %}
